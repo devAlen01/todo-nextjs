@@ -63,14 +63,19 @@ const TodoList = () => {
               data?.map((item) => (
                 <div className={scss.item} key={item._id}>
                   <h4>{item.title}</h4>
-                  <img src={item.image} alt={item.title} />
                   {item.image?.slice(-4, -1).includes("mpe") ? (
                     <audio src={item?.image} controls />
-                  ) : null}
+                  ) : (
+                    <img src={item.image} alt={item.title} />
+                  )}
                   <p>{item.desc}</p>
-                  <video src={item.image} controls>
-                    Video
-                  </video>
+                  {item.image?.includes("mp4") ? (
+                    <video src={item.image} controls>
+                      {item.title}
+                    </video>
+                  ) : (
+                    <img src={item.image} alt={item.title} />
+                  )}
                   <div className={scss.action}>
                     <button
                       className={scss.btn_remove}
