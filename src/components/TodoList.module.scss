@@ -1,0 +1,64 @@
+.TodoList {
+  margin: 30px 0;
+  .content {
+    .list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      height: 90vh;
+      overflow-y: auto;
+      .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 430px;
+        height: 400px;
+        padding: 10px;
+        h4 {
+          font-size: 22px;
+        }
+        img {
+          max-width: 400px;
+          border-radius: 7px;
+          margin: 10px 0;
+        }
+        p {
+          font-size: 16px;
+          margin: 10px 0;
+        }
+        .action {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          button {
+            width: 80px;
+            height: 25px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+          }
+          .btn_remove {
+            background-color: red;
+          }
+          .btn_edit {
+            background-color: rgb(209, 209, 7);
+          }
+        }
+      }
+    }
+    form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      input,
+      button {
+        width: 300px;
+        height: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.AddTodo {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  .content {
+    form {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      .input {
+        padding: 7px;
+        font-size: 18px;
+        width: 350px;
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid red;
+      }
+      button {
+        width: 350px;
+        height: 40px;
+        border-radius: 6px;
+        background-color: red;
+        border: 1px solid rgb(176, 159, 159);
+      }
+    }
+  }
+}
