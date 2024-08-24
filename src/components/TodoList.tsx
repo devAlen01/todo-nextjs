@@ -21,6 +21,8 @@ const TodoList = () => {
     setIsEditId(null);
   };
 
+  console.log(data, "data");
+
   if (isLoading) {
     return (
       <h1
@@ -62,7 +64,13 @@ const TodoList = () => {
                 <div className={scss.item} key={item._id}>
                   <h4>{item.title}</h4>
                   <img src={item.image} alt={item.title} />
+                  {item.image?.slice(-4, -1).includes("mpe") ? (
+                    <audio src={item?.image} controls />
+                  ) : null}
                   <p>{item.desc}</p>
+                  <video src={item.image} controls>
+                    Video
+                  </video>
                   <div className={scss.action}>
                     <button
                       className={scss.btn_remove}
