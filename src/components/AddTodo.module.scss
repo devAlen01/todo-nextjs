@@ -28,3 +28,16 @@
     }
   }
 }
+
+@media (max-width: 720px) {
+  .AddTodo {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    .content {
+      form {
+        height: 50vh;
+      }
+    }
+  }
+}
